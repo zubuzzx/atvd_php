@@ -18,9 +18,11 @@ class Veiculo{
 
     public function ExibirDadosPessoa(){
         echo "================================<br>
-        Nome: $this->nome<br>
-        Idade: $this->idade<br>
-        Profissão: $this->profissao<br>
+        Marca: $this->marca<br>
+        Modelo: $this->modelo<br>
+        Ano: $this->ano<br>
+        Cor: $this->cor<br>
+        Preço carro zero: $this->preco_zero<br>
         ================================<br>";
     }
 

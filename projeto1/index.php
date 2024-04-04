@@ -4,20 +4,40 @@ require_once('classes/Usuario.class.php');
 
 $usuario = new Usuario();
 
-$usuario->nome_completo = "Robson Soares";
-$usuario->email = "robs_som@gmail.com";
-$usuario->senha = "987";
+$usuario->nome_completo = "José Soares";
+$usuario->email = "jsoares@uol.com.br";
+$usuario->senha = "g768h7h8gf7h6f87h";
+$usuario->id = 6;
 
-echo $usuario->Cadastrar();
+echo $usuario->Modificar();
 
-//$tabela = $usuario->Listar();
 
-//mostrar tabela
-//foreach($tabela as $linha){
-//    echo "Nome: ".$linha['nome_completo']."<br>
-//    Email: ".$linha['email']."<br>
-//    Senha: ".$linha['senha']."<br>";
-//}
+
+
+// $usuario->id = 5;
+// echo $usuario->Apagar();
+
+// $usuario->nome_completo = "Paulo Andrade";
+// $usuario->email = "pandrade@gmail.com";
+// $usuario->senha = "robson_125";
+
+// echo $usuario->Cadastrar();
+
+
+
+
+
+
+// $tabela = $usuario->Listar();
+
+// // Mostrar a tabela:
+// foreach($tabela as $linha){
+//     echo "Nome: ".$linha['nome_completo']."<br>
+//     Email: ".$linha['email']."<br>
+//     Senha: ".$linha['senha']."<br>";
+// }
+
+
 
 
 

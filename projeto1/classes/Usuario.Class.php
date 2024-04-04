@@ -30,9 +30,16 @@ class Usuario{
 
     }
     public function Cadastrar(){
-        $sql = "INSERT INTO usuarios('nome_completo', 'email', 'senha') VALUES
-        (?, ?, ?)";
-
+        $sql = "INSERT INTO usuarios(nome_completo, email, senha) VALUES (?,?,?)";
+          $conexao = Banco::conectar();
+          // Converter o comando sql (string) em um objeto:
+          $comando = $conexao->prepare($sql);
+          // Executa o comando:
+          $comando->execute([$this->nome_completo, $this->email, $this->senha]);
+          $linhas = $comando->rowCount();
+          Banco::desconectar();
+          // Retornar a qtd de linhas cadastradas:
+          return $linhas;
     }
     public function Apagar(){
         $sql = "DELETE FROM usuarios WHERE id = ?";
@@ -45,8 +52,5 @@ class Usuario{
 
 
 }
-
-
-
 
 ?>
